@@ -68,6 +68,9 @@ $(document).ready(function () {
             swal("Error!", obj.message, "warning");
           }
         },
+        error: function (response) {
+          console.log(response);
+        },
       });
     } else {
       LoginImageLoader.addClass("hideOnload");
