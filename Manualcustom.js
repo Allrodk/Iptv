@@ -43,6 +43,7 @@ $(document).ready(function () {
       password_identy.addClass("addborder");
     }
     if (totalinput == 2) {
+      console.log(totalinput);
       $("#loginProcessIcon").removeClass("hideOnload");
       jQuery.ajax({
         type: "POST",
@@ -54,7 +55,9 @@ $(document).ready(function () {
           upass: password_value,
           rememberMe: rememberMe_value,
         },
+
         success: function (response) {
+          console.log(response);
           $("#loginProcessIcon").addClass("hideOnload");
           LoginImageLoader.addClass("hideOnload");
           var obj = jQuery.parseJSON(response);
